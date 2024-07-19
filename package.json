@@ -1,0 +1,73 @@
+{
+  "name": "@douglasneuroinformatics/semantic-release",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.3.0",
+  "description": "Semantic release configuration and workflows for DNP projects",
+  "author": "Joshua Unrau",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/DouglasNeuroInformatics/semantic-release/#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DouglasNeuroInformatics/semantic-release.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DouglasNeuroInformatics/semantic-release/issues"
+  },
+  "keywords": [
+    "semantic-release"
+  ],
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "bin": "./bin/cli.js",
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "format": "prettier --write src",
+    "lint": "tsc && eslint --fix src",
+    "prepare": "husky"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "19.x",
+    "@commitlint/config-conventional": "19.x",
+    "husky": "9.x"
+  },
+  "peerDependenciesMeta": {
+    "@commitlint/cli": {
+      "optional": true
+    },
+    "@commitlint/config-conventional": {
+      "optional": true
+    },
+    "husky": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^12.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.3",
+    "@semantic-release/npm": "^12.0.0",
+    "@semantic-release/release-notes-generator": "^13.0.0",
+    "semantic-release": "^23.0.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@douglasneuroinformatics/eslint-config": "^4.2.2",
+    "@douglasneuroinformatics/prettier-config": "^0.0.1",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "typescript": "~5.5.3"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "prettier": "@douglasneuroinformatics/prettier-config"
+}

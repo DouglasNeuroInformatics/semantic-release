@@ -1,0 +1,46 @@
+name: Release
+on:
+  push:
+    branches: ['main']
+  workflow_call:
+    inputs:
+      build-command:
+        required: false
+        type: string
+    secrets:
+      NPM_TOKEN:
+        required: true
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  HUSKY: 0
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          cache: pnpm
+          node-version: 20.11.1
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build
+        if: ${{ inputs.build-command }}
+        run: ${{ inputs.build-command }}
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm exec semantic-release
