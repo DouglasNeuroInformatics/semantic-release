@@ -18,7 +18,7 @@ env:
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
       issues: write
@@ -33,9 +33,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: pnpm
-          node-version: 20.11.1
+          node-version-file: '.nvmrc'
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
+      - name: Lint
+        if: ${{ inputs.lint-command }}
+        run: ${{ inputs.lint-command }}
+      - name: Test
+        if: ${{ inputs.test-command }}
+        run: ${{ inputs.test-command }}
       - name: Build
         if: ${{ inputs.build-command }}
         run: ${{ inputs.build-command }}
