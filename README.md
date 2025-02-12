@@ -89,4 +89,6 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     with:
       build-command: pnpm build # optional
+      lint-command: pnpm lint # optional
+      test-command: pnpm test # optional
 ```
