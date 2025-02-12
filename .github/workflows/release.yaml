@@ -33,7 +33,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: pnpm
-          node-version: 20.11.1
+          node-version-file: '.nvmrc'
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build
