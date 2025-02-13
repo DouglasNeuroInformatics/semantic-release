@@ -17,8 +17,16 @@
   "keywords": [
     "semantic-release"
   ],
-  "main": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./commitlint-config": {
+      "types": "./src/commitlint-config.d.ts",
+      "import": "./src/commitlint-config.js"
+    }
+  },
   "bin": "./bin/cli.js",
   "files": [
     "bin",
