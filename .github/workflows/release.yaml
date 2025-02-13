@@ -7,6 +7,12 @@ on:
       build-command:
         required: false
         type: string
+      lint-command:
+        required: false
+        type: string
+      test-command:
+        required: false
+        type: string
     secrets:
       NPM_TOKEN:
         required: true
