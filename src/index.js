@@ -10,8 +10,7 @@ export default {
     [
       '@semantic-release/npm',
       {
-        npmPublish: true,
-        tarballDir: 'dist'
+        npmPublish: true
       }
     ],
     [
