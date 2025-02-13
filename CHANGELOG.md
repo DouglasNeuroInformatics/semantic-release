@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.1](https://github.com/DouglasNeuroInformatics/semantic-release/compare/v0.2.0...v0.2.1) (2025-02-13)
+
+### Bug Fixes
+
+* support cjs import ([bb6cd48](https://github.com/DouglasNeuroInformatics/semantic-release/commit/bb6cd48fd1dddce4a8d15e7812c00c13bb2ab8ad))
+
 ## [0.2.0](https://github.com/DouglasNeuroInformatics/semantic-release/compare/v0.1.0...v0.2.0) (2025-02-13)
 
 ### Features
