@@ -20,11 +20,11 @@
   "exports": {
     ".": {
       "types": "./src/index.d.ts",
-      "import": "./src/index.js"
+      "default": "./src/index.js"
     },
     "./commitlint-config": {
       "types": "./src/commitlint-config.d.ts",
-      "import": "./src/commitlint-config.js"
+      "default": "./src/commitlint-config.js"
     }
   },
   "bin": {
