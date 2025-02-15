@@ -1,26 +1,10 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["@douglasneuroinformatics/tsconfig"],
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "checkJs": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "lib": ["ESNext"],
-    "maxNodeModuleJsDepth": 0,
-    "module": "Node16",
-    "moduleDetection": "force",
-    "moduleResolution": "Node16",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ESNext",
-    "verbatimModuleSyntax": true
+    "maxNodeModuleJsDepth": 0
   },
   "include": ["*.js", "src/**/*"],
   "exclude": ["**/node_modules"]
