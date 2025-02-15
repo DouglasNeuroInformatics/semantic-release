@@ -25,10 +25,10 @@ This is a convenience wrapper around [semantic-release](https://github.com/seman
 ## Installation
 
 ```sh
-pnpm add -D @douglasneuroinformatics/semantic-release @commitlint/cli @commitlint/config-conventional husky
+pnpm add -D @douglasneuroinformatics/semantic-release husky
 ```
 
-> Note: Commitlint and Husky are optional peer dependencies, and could be replaced with any other toolchain that ensures that conventional commits are followed.
+> Note: Husky is an optional peer dependency, and could be replaced with any other toolchain that ensures that conventional commits are followed.
 
 ## Configuration
 
@@ -55,7 +55,7 @@ Now, add the following configuration:
 ```json
 {
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": ["@douglasneuroinformatics/semantic-release/commitlint-config"]
   },
   "release": {
     "extends": ["@douglasneuroinformatics/semantic-release"]
