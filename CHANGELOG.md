@@ -6,6 +6,12 @@
 
 * update semantic release to latest ([20757d1](https://github.com/DouglasNeuroInformatics/semantic-release/commit/20757d1212ab912f7772a2bc30ff9cc9ac9195b6))
 
+## [0.2.2](https://github.com/DouglasNeuroInformatics/semantic-release/compare/v0.2.1...v0.2.2) (2026-06-03)
+
+### Bug Fixes
+
+* update semantic release to latest ([20757d1](https://github.com/DouglasNeuroInformatics/semantic-release/commit/20757d1212ab912f7772a2bc30ff9cc9ac9195b6))
+
 ## [0.2.1](https://github.com/DouglasNeuroInformatics/semantic-release/compare/v0.2.0...v0.2.1) (2025-02-13)
 
 ### Bug Fixes
